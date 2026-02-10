@@ -8,7 +8,7 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
-    bot.send_message(message.chat.id, "Бот на Render запущен! Отправьте вашу анкету. ✨")
+    bot.send_message(message.chat.id, "Здравствуйте! Пришлите вашу анкету, и я передам её администратору.")
 
 @bot.message_handler(func=lambda message: message.chat.id != MY_ID)
 def forward_to_admin(message):
